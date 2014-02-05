@@ -89,6 +89,11 @@ h1 {
   font-size: 12px;
 }
 
+.link .lastvisit {
+  color: #aaa;
+  font-size: 12px;
+}
+
 .link .info {
   margin-left: 55px;
 }

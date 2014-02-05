@@ -8,6 +8,12 @@ window.Shortly = Backbone.View.extend({
         <li><a href="#" class="create">Shorten</a></li> \
       </ul> \
       </div> \
+      <div> \
+        <form> \
+          <input class="search" type="text" name="search"> \
+          <input type="submit" value="Filter By"> \
+        </form> \
+      </div> \
       <div id="container"></div>'
   ),
 
