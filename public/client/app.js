@@ -8,7 +8,7 @@ window.Shortly = Backbone.View.extend({
         <li><a href="#" class="create">Shorten</a></li> \
       </ul> \
       </div> \
-      <div> \
+      <div id="search"> \
         <form> \
           <input class="search" type="text" name="search"> \
           <input type="submit" value="Filter By"> \
@@ -35,6 +35,7 @@ window.Shortly = Backbone.View.extend({
 
   renderIndexView: function(e){
     e && e.preventDefault();
+    $('#search').show();
     var links = new Shortly.Links();
     var linksView = new Shortly.LinksView( {collection: links} );
     this.$el.find('#container').html( linksView.render().el );
@@ -43,6 +44,7 @@ window.Shortly = Backbone.View.extend({
 
   renderCreateView: function(e){
     e && e.preventDefault();
+    $('#search').hide();
     var linkCreateView = new Shortly.LinkCreateView();
     this.$el.find('#container').html( linkCreateView.render().el );
     this.updateNav('create');

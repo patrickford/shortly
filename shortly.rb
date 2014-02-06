@@ -16,9 +16,12 @@ set :public_folder, File.dirname(__FILE__) + '/public'
 configure :development, :production do
     ActiveRecord::Base.establish_connection(
        :adapter => 'sqlite3',
-       :database =>  'db/dev.sqlite3.db'
+       :database => 'db/dev.sqlite3.db'
      )
 end
+
+# Turn on user sessions for authentication
+enable :sessions
 
 # Handle potential connection pool timeout issues
 after do
